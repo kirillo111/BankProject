@@ -17,6 +17,7 @@ private:
     string phone;
     string userType; // admin, client
     string role;
+    string password;
 public:
 
     User();
@@ -29,6 +30,7 @@ public:
     string getPhone();
     string getUserType();
     string getRole();
+    string getPassword();
 
     void setId(string id);
     void setName(string name);
@@ -36,6 +38,7 @@ public:
     void setPhone(string phone);
     void setUserType(string userType);
     void setRole(string role);
+    void setPassword(string password);
 };
 
 

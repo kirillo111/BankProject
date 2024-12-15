@@ -50,6 +50,13 @@ void User::setRole(string role) {
 void User::setUserType(string userType) {
     this->userType = userType;
 }
+string User::getPassword() {
+    return password;
+}
+
+void User::setPassword(string password) {
+    this->password = password;
+}
 
 User::User() {
 

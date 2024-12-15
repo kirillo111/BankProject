@@ -1,15 +1,17 @@
 #include <iostream>
 
+#include "Registration.h"
 #include "User.h"
 
 using namespace std;
 
 int main() {
-
-    User user;
-
     while (true) {
 
+        User user;
+        Registration registration;
+
+        registration.registerUser(user);
 
 
 

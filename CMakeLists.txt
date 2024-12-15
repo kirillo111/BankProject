@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(BankProject main.cpp
         User.cpp
-        User.h)
+        User.h
+        Registration.cpp
+        Registration.h)

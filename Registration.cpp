@@ -29,4 +29,5 @@ bool Registration::validatePhone(string phone) {
 
 void Registration::saveToFile(User user) {
     //TODO save to file
+    cout << "Saving to file " << user.getName() << endl;
 }

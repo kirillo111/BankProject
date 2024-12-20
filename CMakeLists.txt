@@ -12,4 +12,6 @@ add_executable(BankProject main.cpp
         account/Account.cpp
         account/Account.h
         utils/DateUtil.cpp
-        utils/DateUtil.h)
+        utils/DateUtil.h
+        bank/Bank.cpp
+        bank/Bank.h)

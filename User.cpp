@@ -62,12 +62,14 @@ User::User() {
 
 }
 
-User::User(string id, string name, string email, string phone, string userType, string role) {
-    this->id = id;
+User::User( string name, string email, string phone, string userType, string role) {
+    this->id = uuid::generate_uuid_v4();
     this->name = name;
     this->email = email;
     this->phone = phone;
     this->userType = userType;
     this->role = role;
+    DateUtil d = DateUtil();
+    this->created = d.getDate();
 }
 

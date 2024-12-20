@@ -8,4 +8,8 @@ add_executable(BankProject main.cpp
         User.h
         Registration.cpp
         Registration.h
-        untils/UUID.h)
+        utils/UUID.h
+        account/Account.cpp
+        account/Account.h
+        utils/DateUtil.cpp
+        utils/DateUtil.h)

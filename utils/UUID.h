@@ -1,7 +1,3 @@
-//
-// Created by student on 15.12.2024.
-//
-
 #ifndef UUID_H
 #define UUID_H
 #include <string>
@@ -14,7 +10,8 @@ namespace uuid {
     static std::uniform_int_distribution<> dis(0, 15);
     static std::uniform_int_distribution<> dis2(8, 11);
 
-    std::string generate_uuid_v4() {
+    // Mark the function as inline to prevent multiple definitions
+    inline std::string generate_uuid_v4() {
         std::stringstream ss;
         int i;
         ss << std::hex;

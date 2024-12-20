@@ -7,4 +7,5 @@ add_executable(BankProject main.cpp
         User.cpp
         User.h
         Registration.cpp
-        Registration.h)
+        Registration.h
+        untils/UUID.h)

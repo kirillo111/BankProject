@@ -3,8 +3,11 @@
 #include "Registration.h"
 #include "User.h"
 #include "account/Account.h"
+#include "bank/Bank.h"
+#include <nlohmann/json.hpp>
 
 using namespace std;
+
 int main() {
     /*while (true) {
 
@@ -53,14 +56,45 @@ int main() {
         }
     }*/
 
+    Bank bank("Privates", "Kiev");
 
-    User user("Robert Jackson", "email@com","380391000002","client","admin");
-    Account* account = new Account(user);
+    User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
+    // Account* account = new Account(user);
+    // Account* account2 = new Account(user);
 
-    account->show();
+    Registration registration;
+    registration.registerUser(user);
+    registration.registerUser(user);
 
 
-    delete account;
+    // bank.addAccount(account);
+    // bank.addAccount(account2);
+    //
+    // User user2("Anna Karenina", "Karenina@com", "380391000003", "client", "admin");
+    // Account* account3 = new Account(user2);
+    //
+    // User user3("Petya Ivanov", "Ivanov@com", "380391000004", "client", "manager");
+    // Account* account4 = new Account(user3);
+    // Account* account5 = new Account(user3);
+    // Account* account6 = new Account(user3);
+    //
+    // User user4("Vasya Shotygonovich", "Shotygonovich@com", "380391000005", "client", "admin");
+    // Account* account7 = new Account(user4);
+    //
+    // bank.addAccount(account3);
+    // bank.addAccount(account4);
+    // bank.addAccount(account5);
+    // bank.addAccount(account6);
+    // bank.addAccount(account7);
+    //
+    // account->setStatus("progress");
+    // account2->setStatus("progress");
+    // account7->setStatus("progress");
+    //
+    // bank.showAccounts();
+    // bank.showFilteredAccountsByStatus("progress");
+
+    return 0; // Деструктор `Bank` автоматично видалить акаунти
 
     return 0;
 }

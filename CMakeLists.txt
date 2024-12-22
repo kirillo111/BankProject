@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.30)
 project(BankProject)
 
 set(CMAKE_CXX_STANDARD 20)
+include_directories(${CMAKE_SOURCE_DIR}/libs/json/single_include)
+
 
 add_executable(BankProject main.cpp
         User.cpp
@@ -12,4 +14,8 @@ add_executable(BankProject main.cpp
         account/Account.cpp
         account/Account.h
         utils/DateUtil.cpp
-        utils/DateUtil.h)
+        utils/DateUtil.h
+        bank/Bank.cpp
+        bank/Bank.h
+)
+

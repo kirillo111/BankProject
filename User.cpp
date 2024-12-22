@@ -3,6 +3,7 @@
 //
 
 #include "User.h"
+#include <nlohmann/json.hpp>
 
 string User::getId() {
     return id;
@@ -58,6 +59,19 @@ void User::setPassword(string password) {
     this->password = password;
 }
 
+nlohmann::json User::toJson() const {
+    return nlohmann::json{
+        {"id",        id},
+        {"name",      name},
+        {"email",     email},
+        {"phone",     phone},
+        {"userType",  userType},
+        {"role",      role},
+        {"password",  password},
+        {"created",   created}
+    };
+}
+
 User::User() {
 
 }
@@ -72,4 +86,6 @@ User::User( string name, string email, string phone, string userType, string rol
     DateUtil d = DateUtil();
     this->created = d.getDate();
 }
+
+
 

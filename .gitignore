@@ -1,0 +1,29 @@
+# Ignore CLion project files
+.idea/
+cmake-build-*/
+*.iml
+
+# Ignore specific system files
+*.log
+*.out
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.pdb
+*.class
+
+# Ignore user-specific configuration files
+*.user
+*.workspace
+*.iws
+*.ipr
+
+# Ignore CMake cache and files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+user.json

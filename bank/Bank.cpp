@@ -4,6 +4,7 @@
 
 #include "Bank.h"
 
+
 vector<Account*> Bank::getAccounts() {
     return accounts;
 }
@@ -27,7 +28,25 @@ string Bank::getId() {
 }
 
 void Bank::addAccount(Account *account) {
-    accounts.push_back(account);
+    const string filename = "../accounts.json";
+
+    nlohmann::json data;
+
+    ifstream file(filename);
+    if (file.is_open()) {
+        file >> data;
+        file.close();
+    } else {
+        data = nlohmann::json::array();
+    }
+
+    data.push_back(account->toJson());
+
+    ofstream outfile(filename);
+    if (outfile.is_open()) {
+        outfile <<  data;
+        outfile.close();
+    }
 }
 
 void Bank::showAccounts() {

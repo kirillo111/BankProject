@@ -31,7 +31,7 @@ bool Registration::validatePhone(string phone) {
 
 void Registration::saveToFile(User user) {
     // Шлях до файлу з користувачами
-    const std::string filePath = "C:\\Users\\andre\\CLionProjects\\BankProject\\user.json";
+    const std::string filePath = "../user.json";
 
     nlohmann::json data; // Тут зберігатимуться всі користувачі
 

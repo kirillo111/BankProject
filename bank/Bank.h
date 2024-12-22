@@ -16,7 +16,7 @@ private:
     string id;
     string name;
     string address;
-    vector<Account> accounts;
+    vector<Account*> accounts;
 public:
     Bank(string name, string address);
 
@@ -24,8 +24,8 @@ public:
     string getName();
     string getAddress();
 
-    vector<Account> getAccounts();
-    void addAccount(Account account);
+    vector<Account*> getAccounts();
+    void addAccount(Account *account);
     void showAccounts();
 
     void showFilteredAccounts(string name);

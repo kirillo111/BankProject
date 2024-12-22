@@ -55,50 +55,40 @@ int main() {
         }
     }*/
 
-    Bank bank = Bank("Privates", "Kiev");
+    Bank bank("Privates", "Kiev");
 
     User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
-    Account *account = new Account(user);
-    Account *account2 = new Account(user);
+    Account* account = new Account(user);
+    Account* account2 = new Account(user);
 
-    bank.addAccount(*account);
-    bank.addAccount(*account2);
+    bank.addAccount(account);
+    bank.addAccount(account2);
 
     User user2("Anna Karenina", "Karenina@com", "380391000003", "client", "admin");
+    Account* account3 = new Account(user2);
 
-    Account account3 = Account(user2);
+    User user3("Petya Ivanov", "Ivanov@com", "380391000004", "client", "manager");
+    Account* account4 = new Account(user3);
+    Account* account5 = new Account(user3);
+    Account* account6 = new Account(user3);
 
-    User user3 = User("Petya Ivanov", "Ivanov@com", "380391000004", "client", "manager");
-
-    Account *account4 = new Account(user3);
-    Account *account5 = new Account(user3);
-    Account *account6 = new Account(user3);
-
-    User user4 = User("Vasya Shotygonovich", "Shotygonovich@com", "380391000005", "client", "admin");
-
-    Account account7 = Account(user4);
+    User user4("Vasya Shotygonovich", "Shotygonovich@com", "380391000005", "client", "admin");
+    Account* account7 = new Account(user4);
 
     bank.addAccount(account3);
-    bank.addAccount(*account4);
-    bank.addAccount(*account5);
-    bank.addAccount(*account6);
+    bank.addAccount(account4);
+    bank.addAccount(account5);
+    bank.addAccount(account6);
     bank.addAccount(account7);
-
-    //bank.showAccounts();
-    // Написати функцію, яка приймає ім'я і віддає тільки Акаунти Користувача з цим ім'ям
-    //bank.showFilteredAccounts(user3.getName());
 
     account->setStatus("progress");
     account2->setStatus("progress");
-    account7.setStatus("progress");
+    account7->setStatus("progress");
+
     bank.showAccounts();
-    // bank.showFilteredAccountsByStatus("progress");
-    //
-    // delete account;
-    // delete account2;
-    // delete account4;
-    // delete account5;
-    // delete account6;
+    bank.showFilteredAccountsByStatus("progress");
+
+    return 0; // Деструктор `Bank` автоматично видалить акаунти
 
     return 0;
 }

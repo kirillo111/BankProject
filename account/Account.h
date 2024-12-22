@@ -6,7 +6,7 @@
 #define ACCOUNT_H
 #include "../User.h"
 #include <iostream>
-
+#include "nlohmann/json.hpp"
 
 using namespace std;
 
@@ -33,6 +33,9 @@ public:
     User getApplicant();
 
     void show();
+
+    nlohmann::json toJson();
+
 };
 
 

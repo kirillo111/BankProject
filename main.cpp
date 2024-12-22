@@ -59,13 +59,15 @@ int main() {
     Bank bank("Privates", "Kiev");
 
     User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
-    // Account* account = new Account(user);
-    // Account* account2 = new Account(user);
+    Account* account = new Account(user);
+    Account* account2 = new Account(user);
 
     Registration registration;
     registration.registerUser(user);
     registration.registerUser(user);
 
+    bank.addAccount(account);
+    bank.addAccount(account2);
 
     // bank.addAccount(account);
     // bank.addAccount(account2);

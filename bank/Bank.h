@@ -6,6 +6,7 @@
 #define BANK_H
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 #include "../account/Account.h"
 

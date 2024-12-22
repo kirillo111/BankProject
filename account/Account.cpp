@@ -47,3 +47,12 @@ void Account::show() {
     cout << "Date: " << date << endl;
     cout << "USER: " << applicant.getName() << endl;
 }
+
+nlohmann::json Account::toJson() {
+    return nlohmann::json{
+        {"id", id},
+        {"applicant", applicant.toJson()},
+        {"date", date},
+        {"status", status}
+    };
+}

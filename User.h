@@ -6,6 +6,8 @@
 #define USER_H
 
 #include <iostream>
+#include <nlohmann/json.hpp>
+
 #include "utils/UUID.h"
 #include "utils/DateUtil.h"
 
@@ -42,6 +44,9 @@ public:
     void setUserType(string userType);
     void setRole(string role);
     void setPassword(string password);
+
+    // A method to convert this class instance to a nlohmann::json object
+    nlohmann::json toJson() const;
 };
 
 

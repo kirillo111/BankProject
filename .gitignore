@@ -1,6 +1,6 @@
 # Ignore CLion project files
 .idea/
-cmake-build-*
+cmake-build-*/
 *.iml
 
 # Ignore specific system files
@@ -25,3 +25,5 @@ CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+
+user.json

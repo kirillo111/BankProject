@@ -58,9 +58,24 @@ int main() {
 
     Bank bank("Privates", "Kiev");
 
-    User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
-    Account* account = new Account(user);
-    Account* account2 = new Account(user);
+    Account* userAccount = new Account(user);
+    userAccount->show();
+    bank.addAccount(userAccount);
+
+    userAccount->addToBalance(200.0);
+    userAccount->addToBalance(300.0);
+    userAccount->addToBalance(-300.0);
+
+    cout << "Balance: " << userAccount->getBalance() << endl;
+
+    userAccount->minusFromBalance(250.0);
+    userAccount->minusFromBalance(550.0);
+
+    cout << "Balance: " << userAccount->getBalance() << endl;
+
+    delete userAccount;
+    delete user;
+
 
     Registration registration;
     registration.registerUser(user);
